@@ -1,6 +1,12 @@
+using Aljp.Infrastructure;
+using Aljp.Web;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services.AddMvcDependencyInjection();
+
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
