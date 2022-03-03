@@ -13,6 +13,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Aljp.Application\Aljp.Application.csproj" />
+      <ProjectReference Include="..\Aljp.Infrastructure\Aljp.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>
