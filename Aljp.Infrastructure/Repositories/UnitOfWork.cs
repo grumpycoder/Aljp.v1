@@ -1,4 +1,4 @@
-using Aljp.Application.Interfacs;
+using Aljp.Application.Interfaces;
 using Aljp.Infrastructure.Persistence;
 
 namespace Aljp.Infrastructure;

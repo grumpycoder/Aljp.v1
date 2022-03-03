@@ -1,5 +1,5 @@
 ﻿using System.Linq.Expressions;
-using Aljp.Application.Interfacs;
+using Aljp.Application.Interfaces;
 using Aljp.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 

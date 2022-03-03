@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace Aljp.Application.Interfacs;
+namespace Aljp.Application.Interfaces;
 
 public interface IRepository<T> where T : class
 {

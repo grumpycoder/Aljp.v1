@@ -1,4 +1,5 @@
-﻿using Aljp.Application.Vendor.Queries;
+﻿using Aljp.Application.Vendor.Commands;
+using Aljp.Application.Vendor.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,5 +32,18 @@ public class VendorsController : ControllerBase
         return Ok(entity);
     }
     
+    [HttpPost]
+    [Route("", Name = nameof(CreateVendor))]
+    public async Task<ActionResult> Post([FromBody]CreateVendor.Command command)
+    {
+        var entity = await _mediator.Send(command);
+        return new CreatedAtRouteResult(nameof(CreateVendor), new { id = entity.Id }, entity);
+    }
     
+    [HttpPut]
+    public async Task<ActionResult> Put([FromBody]UpdateVendor.Command command)
+    {
+        var result = await _mediator.Send(command);
+        return Ok(result);
+    }
 }

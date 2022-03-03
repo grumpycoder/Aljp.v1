@@ -1,4 +1,4 @@
-﻿namespace Aljp.Application.Interfacs;
+﻿namespace Aljp.Application.Interfaces;
 
 public interface IUnitOfWork : IDisposable
 {

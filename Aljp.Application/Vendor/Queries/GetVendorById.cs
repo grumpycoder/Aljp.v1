@@ -1,5 +1,5 @@
 ﻿using Aljp.Application.Common.Exceptions;
-using Aljp.Application.Interfacs;
+using Aljp.Application.Interfaces;
 using MediatR;
 
 namespace Aljp.Application.Vendor.Queries;
