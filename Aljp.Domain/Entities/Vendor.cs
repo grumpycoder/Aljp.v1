@@ -5,6 +5,7 @@ namespace Aljp.Domain.Entities;
 public class Vendor : DomainEntity
 {
     public string CompanyName { get; set; } = string.Empty;
+    public string CompanyWebsiteUrl { get; set; } = string.Empty; 
     public string SpinNumber { get; set; } = string.Empty;
     public string PhoneNumber { get; set; } = string.Empty;
     public string Street { get; set; } = string.Empty;

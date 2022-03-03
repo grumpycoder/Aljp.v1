@@ -22,4 +22,14 @@ public class VendorsController : ControllerBase
         var list = await _mediator.Send(new GetAllVendors.Query(), token);
         return Ok(list);
     }
+    
+    [HttpGet]
+    [Route("{id:int}", Name = nameof(GetVendorById))]
+    public async Task<ActionResult> GetById([FromRoute] int id, CancellationToken token = new())
+    {
+        var entity = await _mediator.Send(new GetVendorById.Query(id), token);
+        return Ok(entity);
+    }
+    
+    
 }
