@@ -1,4 +1,6 @@
+using Aljp.Application.Interfacs;
 using Aljp.Infrastructure.Persistence;
+using Aljp.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -20,6 +22,9 @@ public static class InfrastructureDependencyInjection
                 )
         );
       
+        services.AddScoped<IVendorRepository, VendorRepository>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>(); 
+        
         return services;
     }
 }

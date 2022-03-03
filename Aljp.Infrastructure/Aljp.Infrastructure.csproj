@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\Aljp.Application\Aljp.Application.csproj" />
       <ProjectReference Include="..\Aljp.Domain\Aljp.Domain.csproj" />
     </ItemGroup>
 
