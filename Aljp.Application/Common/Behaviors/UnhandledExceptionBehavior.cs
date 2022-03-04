@@ -22,7 +22,7 @@ public class UnhandledExceptionBehavior<TRequest, TResponse> : IPipelineBehavior
         {
             var requestName = typeof(TRequest).Name;
 
-            _logger.LogError(ex, "AdenCa Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
+            _logger.LogError(ex, "ALJP Request: Unhandled Exception for Request {Name} {@Request}", requestName, request);
 
             throw;
         }

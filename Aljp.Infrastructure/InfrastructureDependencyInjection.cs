@@ -23,6 +23,7 @@ public static class InfrastructureDependencyInjection
         );
       
         services.AddScoped<IVendorRepository, VendorRepository>();
+        services.AddScoped<IMiniBidRepository, MiniBidRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>(); 
         
         return services;

@@ -7,13 +7,15 @@ public class UnitOfWork: IUnitOfWork
 {
     private readonly ApplicationDbContext _context;
 
-    public UnitOfWork(ApplicationDbContext context, IVendorRepository vendors)
+    public UnitOfWork(ApplicationDbContext context, IVendorRepository vendors, IMiniBidRepository miniBids)
     {
         _context = context;
         Vendors = vendors;
+        MiniBids = miniBids; 
     }
     
     public IVendorRepository Vendors { get; private set; }
+    public IMiniBidRepository MiniBids { get; private set; }
     
     public int Complete()
     {

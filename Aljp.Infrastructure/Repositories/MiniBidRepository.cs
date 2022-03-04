@@ -4,9 +4,9 @@ using Aljp.Infrastructure.Persistence;
 
 namespace Aljp.Infrastructure.Repositories;
 
-public class VendorRepository : Repository<Vendor>, IVendorRepository
+public class MiniBidRepository : Repository<MiniBid>, IMiniBidRepository
 {
-    public VendorRepository(ApplicationDbContext context) : base(context)
+    public MiniBidRepository(ApplicationDbContext context) : base(context)
     {
     }
 }

@@ -16,8 +16,7 @@ public static class GetVendorById
         }
     }
 
-    public class
-        Handler : IRequestHandler<Query, Domain.Entities.Vendor>
+    public class Handler : IRequestHandler<Query, Domain.Entities.Vendor>
     {
         private readonly IUnitOfWork _uow;
 
@@ -29,8 +28,8 @@ public static class GetVendorById
         public async Task<Domain.Entities.Vendor> Handle(Query request,
             CancellationToken cancellationToken)
         {
-            var entity = await _uow.Vendors.GetById(request.Id); 
-            
+            var entity = await _uow.Vendors.GetById(request.Id);
+
             if (entity == null) throw new NotFoundException(nameof(Domain.Entities.Vendor), request.Id);
 
             return entity;

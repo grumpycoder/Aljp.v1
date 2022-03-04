@@ -15,6 +15,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="MiniBid\Commands" />
+      <Folder Include="MiniBid\Handlers" />
       <Folder Include="Vendor\Handlers" />
     </ItemGroup>
 
